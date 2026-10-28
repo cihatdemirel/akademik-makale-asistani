@@ -27,7 +27,7 @@ jobs:
       - name: Claude Code ile bakım
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             CLAUDE.md dosyasını oku ve "Aylık bakım" görevini eksiksiz uygula.
             Bitirdiğinde depo kökünde BAKIM_NOTU.md bulunmalı.
