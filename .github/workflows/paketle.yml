@@ -1,0 +1,35 @@
+name: Skill paketle
+
+on:
+  push:
+    branches: [main]
+    paths: ["akademik-makale-asistani/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  paket:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Testler
+        run: python3 akademik-makale-asistani/scripts/duman_testi.py
+      - name: .skill dosyası oluştur
+        run: |
+          find akademik-makale-asistani -name "__pycache__" -prune -exec rm -rf {} +
+          zip -r akademik-makale-asistani.skill akademik-makale-asistani
+          SURUM=$(grep -oE "Skill sürümü: [0-9.]+" akademik-makale-asistani/references/guncellik-kaydi.md | grep -oE "[0-9.]+$")
+          echo "SURUM=$SURUM" >> $GITHUB_ENV
+      - name: Sürüm yayınla
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.SURUM }}-${{ github.run_number }}
+          name: Akademik Makale Asistanı v${{ env.SURUM }}
+          files: akademik-makale-asistani.skill
+          body: "Claude'a yüklemek için akademik-makale-asistani.skill dosyasını indirin."
