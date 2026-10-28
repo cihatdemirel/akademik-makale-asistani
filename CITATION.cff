@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Bu yazılımı kullandıysanız lütfen aşağıdaki şekilde atıf yapın. If you use this software, please cite it as below."
+title: "Akademik Makale Asistanı (Academic Manuscript Assistant): A Claude skill for health sciences manuscripts"
+type: software
+authors:
+  - family-names: "Demirel"
+    given-names: "Cihat"
+    orcid: "https://orcid.org/0000-0001-9556-4666"
+    affiliation: "Muş Alparslan University"
+version: "4.1"
+date-released: "2026-10-28"
+repository-code: "https://github.com/cihatdemirel/akademik-makale-asistani"
+license: MIT
+keywords:
+  - academic writing
+  - nursing research
+  - health sciences
+  - statistics
+  - reporting guidelines
+  - peer review
+  - Claude
+abstract: >-
+  A multi-role Claude skill supporting literature search with reference
+  verification, rule-based statistical method selection and analysis,
+  manuscript writing, language editing and peer review for health sciences
+  and nursing research.

@@ -1,37 +1,48 @@
-# Akademik Makale Asistanı · otomatik bakımlı Claude skill'i
+# Akademik Makale Asistanı · Academic Manuscript Assistant
 
-Her ayın 1'inde Claude Code bir GitHub sunucusunda çalışır. Yönergeleri ve yöntem künyelerini birincil kaynaklardan kontrol eder, testleri çalıştırır ve değişiklikleri **sizin onayınıza** bir PR olarak sunar. Onayladığınızda yeni `.skill` dosyası otomatik paketlenir.
+[![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Testler](https://github.com/cihatdemirel/akademik-makale-asistani/actions/workflows/test.yml/badge.svg)](https://github.com/cihatdemirel/akademik-makale-asistani/actions/workflows/test.yml)
 
-## Kurulum (bir kez, ~20 dakika)
+**TR** · Sağlık bilimleri ve hemşirelik araştırmacıları için, makalenin her aşamasında çalışan bir Claude skill'i. Soruya göre literatür tarayıcı, istatistikçi, yazar, dil editörü ya da hakem rolüne geçer. Kaynakları bir araçla doğrulamadan yazmaz; analiz kararlarını yayımlanmış yöntem kaynaklarına dayandırır.
 
-1. **Depo oluşturun.** GitHub → New repository → ad: `akademik-makale-asistani` → **Private** → Create.
-2. **Dosyaları yükleyin.** Bu klasörün tüm içeriğini (gizli `.github` klasörü dahil) depoya yükleyin.
-   - En kolayı GitHub Desktop: depoyu bilgisayara klonlayın, bu dosyaları içine kopyalayın, Commit → Push.
-   - Komut satırıyla:
-     ```bash
-     cd akademik-makale-asistani-repo
-     git init && git add . && git commit -m "ilk sürüm"
-     git branch -M main
-     git remote add origin https://github.com/KULLANICI_ADINIZ/akademik-makale-asistani.git
-     git push -u origin main
-     ```
-   - Web arayüzünden sürükle-bırak yaparsanız `.github` klasörünün yüklendiğini kontrol edin (macOS gizli klasörleri göstermeyebilir).
-3. **API anahtarı.** console.anthropic.com → API Keys → yeni anahtar. Depoda Settings → Secrets and variables → Actions → New repository secret → Name: `ANTHROPIC_API_KEY`, Secret: anahtarınız.
-   - API kullanımı Claude aboneliğinizden **ayrı ücretlendirilir**. Console'da aylık harcama sınırı koymanızı öneririm.
-4. **Claude GitHub uygulaması.** github.com/apps/claude → Install → yalnızca bu depoyu seçin.
-5. **İş akışı izinleri.** Depoda Settings → Actions → General → Workflow permissions → "Read and write permissions" ve "Allow GitHub Actions to create and approve pull requests" kutusunu işaretleyin → Save.
-6. **İlk deneme.** Actions sekmesi → "Aylık skill bakımı" → Run workflow. 10–40 dakika sürebilir.
+**EN** · A Claude skill for health sciences and nursing researchers that supports every stage of a manuscript. It switches roles as needed: literature searcher, statistician, author, language editor or peer reviewer. It never writes a reference it has not verified with a tool, and it grounds every analytic decision in published methodological sources.
 
-## Her ay ne yapacaksınız (~5 dakika)
+---
 
-1. GitHub'dan "Aylık skill bakımı" PR bildirimi gelir.
-2. PR açıklamasındaki bakım notunu okuyun: ne değişti, hangi kaynağa dayanarak.
-3. "Files changed" sekmesinde değişikliklere göz atın. "Testler" kontrolü yeşil olmalı.
-4. Uygunsa **Merge**. Uygun değilse PR'ı kapatın ya da yorum yazın.
-5. Merge sonrası Releases bölümünde yeni sürüm oluşur → `akademik-makale-asistani.skill` dosyasını indirin → Claude'daki skill yükleme bölümünden yükleyin (aynı adlı skill güncellenir).
+## Ne yapar? · What it does
 
-## Güvenlik ve sınırlar
-- Ajan hiçbir değişikliği doğrudan ana dala yazmaz; her şey sizin onayınızla birleşir.
-- `CLAUDE.md` ajanın kurallarını içerir: yalnızca birincil kaynak, uydurma DOI yok, test geçmeden bitirme yok.
-- Claude.ai tarafına yükleme elle yapılır; GitHub ile Claude.ai arasında otomatik eşitleme yoktur.
-- Maliyeti sınırlamak için `skill-bakim.yml` içindeki `--max-turns` değerini düşürebilir ya da `cron` satırını üç ayda bir (`0 6 1 */3 *`) yapabilirsiniz.
+| Rol · Role | Örnek · Example |
+|---|---|
+| Literatür · Literature | PubMed, Scite, Consensus, Elicit ile kaynak bulma ve künye/DOI doğrulama · finding and verifying sources |
+| İstatistik · Statistics | Kural tabanlı yöntem seçimi, SPSS/Excel verisinin analizi, aracılık/düzenleyicilik, karma modeller, meta-analiz, makine öğrenmesi, ağ analizi · rule-based method selection and analysis |
+| Denetim · Checks | p değerlerinin yeniden hesaplanması (statcheck mantığı), GRIM, kaynakça güncelliği · statistical and reference consistency checks |
+| Yazım · Writing | Bölüm planı, kelime bütçesi, doğal akademik dil · section planning and natural academic prose |
+| Hakem · Review | Gönderim öncesi denetim, hakem raporu, hakemlere yanıt · pre-submission audit, review reports, rebuttal letters |
+| Yönergeler · Guidelines | CONSORT 2025, SPIRIT 2025, STROBE, PRISMA 2020, COREQ, TRIPOD+AI |
+
+## Kurulum · Installation
+
+1. [Releases](https://github.com/cihatdemirel/akademik-makale-asistani/releases) bölümünden en yeni `akademik-makale-asistani.skill` dosyasını indirin · Download the latest `.skill` file from Releases.
+2. Claude'da skill yükleme bölümünden yükleyin · Upload it in Claude's skills section.
+3. Bir makale isteğiyle kullanmaya başlayın · Start with any manuscript-related request, e.g. *"Bu veri için hangi analiz uygun?"*
+
+## Güncel kalma · Staying current
+
+Her ayın 1'inde Claude Code, raporlama yönergelerini ve yöntem künyelerini birincil kaynaklardan kontrol eder, testleri çalıştırır ve değişiklikleri bir pull request olarak sunar. Hiçbir değişiklik bakımcının onayı olmadan yayımlanmaz. Ayrıntılar: `CLAUDE.md`.
+
+On the 1st of every month, Claude Code checks reporting guidelines and method references against primary sources, runs the test suite and proposes changes as a pull request. Nothing is released without maintainer approval.
+
+## Önemli uyarı · Disclaimer
+
+Bu araç istatistik danışmanlığının, etik kurul değerlendirmesinin ve yazarın sorumluluğunun yerini tutmaz. Tüm analizler, kaynaklar ve metinler yazar tarafından kontrol edilmelidir. Dergi politikası gerektiriyorsa yapay zekâ kullanımı beyan edilmelidir.
+
+This tool does not replace statistical consultation, ethics review or author responsibility. All analyses, references and text must be checked by the author. Disclose AI use where journal policy requires it.
+
+## Atıf · Citation
+
+Bu aracı kullandıysanız lütfen sağdaki **"Cite this repository"** düğmesindeki künyeyle atıf yapın · If you use this tool, please cite it via **"Cite this repository"**.
+
+## Lisans · License
+
+Kod (`scripts/`): [MIT](LICENSE) · Rehber metinleri (`references/`, `SKILL.md`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
