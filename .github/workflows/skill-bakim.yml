@@ -1,0 +1,49 @@
+name: Aylık skill bakımı
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"   # Her ayın 1'i, 06:00 UTC (Türkiye 09:00)
+  workflow_dispatch:       # Actions sekmesinden elle de çalıştırılabilir
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  bakim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bağımlılıklar
+        run: pip install -r requirements.txt
+
+      - name: Claude Code ile bakım
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            CLAUDE.md dosyasını oku ve "Aylık bakım" görevini eksiksiz uygula.
+            Bitirdiğinde depo kökünde BAKIM_NOTU.md bulunmalı.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 60
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(pip:*),Bash(curl:*)"
+
+      - name: Testler (güvence)
+        run: python3 akademik-makale-asistani/scripts/duman_testi.py
+
+      - name: Değişiklik önerisi (PR) aç
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bakim/${{ github.run_id }}
+          title: "Aylık skill bakımı (${{ github.run_number }})"
+          body-path: BAKIM_NOTU.md
+          commit-message: "Aylık skill bakımı"
+          delete-branch: true
