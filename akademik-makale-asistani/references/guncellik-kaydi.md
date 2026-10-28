@@ -1,6 +1,6 @@
 # Güncellik Kaydı ve Bakım Modu
 
-Skill sürümü: 4.0 · Son genel bakım: 2026-10-28
+Skill sürümü: 4.1 · Son genel bakım: 2026-10-28
 
 Skill **kuralları ve yöntemleri** saklar; **literatürü saklamaz**. Konu literatürü her istekte bağlayıcılarla canlı olarak taranır, bu yüzden eskimez. Burada yalnızca zamanla değişebilen kurallar izlenir.
 
@@ -15,7 +15,7 @@ Skill **kuralları ve yöntemleri** saklar; **literatürü saklamaz**. Konu lite
 | ICMJE önerileri (yapay zekâ beyanı dahil) | hakem.md, gonderim-oncesi-denetim.md | yapay zekâ kullanımının beyanı | 2026-10-28 | icmje.org | 12 ay |
 | APA stil kuralları | istatistikci.md, dil-ve-uslup.md | APA 7 | 2026-10-28 | apastyle.apa.org | 12 ay |
 | Atıf güncelliği normu | literatur-tarama.md | çoğunluk son 5 yıl | 2026-10-28 | hemşirelik dergisi yazım kuralları | 24 ay |
-| Yöntem kaynakları künyeleri | yontem-kaynaklari.md | 57 künye taslağı, 1'i doğrulandı | 2026-10-28 | PubMed / Crossref / yayıncı | her bakımda (doğrulanmamış olanlardan başla) |
+| Yöntem kaynakları künyeleri | yontem-kaynaklari.md | 57 künye; 15 doğrulandı, 1 bulunamadı, 41 doğrulanmadı | 2026-10-28 | PubMed / Crossref / yayıncı | her bakımda (doğrulanmamış olanlardan başla) |
 | Bağlayıcı kataloğu | baglayici-katalogu.md | 10 kategori | 2026-10-28 | tool_search, search_mcp_registry | her bakımda |
 | Python paketleri | scripts/*.py | pingouin 0.7, sklearn 1.8, LightGBM 4.7, SHAP 0.54, semopy 2.3 ile test edildi; factor_analyzer çalışmıyor | 2026-10-28 | betik testi (sentetik veri) | her bakımda |
 | İleri yöntem standartları | ileri-yontemler.md | ağ analizi raporlama, TRIPOD+AI, LPA ölçütleri, meta-analiz (REML+HKSJ) | 2026-10-28 | ilgili yöntem makaleleri, EQUATOR | 12 ay |
