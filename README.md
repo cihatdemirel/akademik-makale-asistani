@@ -20,7 +20,7 @@
 | Yazım · Writing | Bölüm planı, kelime bütçesi, doğal akademik dil · section planning and natural academic prose |
 | Hakem · Review | Gönderim öncesi denetim, hakem raporu, hakemlere yanıt · pre-submission audit, review reports, rebuttal letters |
 | Yönergeler · Guidelines | CONSORT 2025, SPIRIT 2025, STROBE, PRISMA 2020, COREQ, TRIPOD+AI |
-
+Akademik çalışmalar için önerilen diğer skill koleksiyonları: [ONERILEN-SKILLER.md](ONERILEN-SKILLER.md)
 ## Kurulum · Installation
 
 1. [Releases](https://github.com/cihatdemirel/akademik-makale-asistani/releases) bölümünden en yeni `akademik-makale-asistani.skill` dosyasını indirin · Download the latest `.skill` file from Releases.
