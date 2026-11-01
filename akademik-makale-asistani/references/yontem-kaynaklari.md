@@ -25,26 +25,26 @@ Analiz kararlarının bilimsel dayanağı. `yontem_secici.py` her kararda burada
 | field2018 | Field A. Discovering Statistics Using IBM SPSS Statistics. 5th ed. Sage; 2018. | Genel test seçimi, varsayımlar | Doğrulanmadı |
 | fornell1981 | Fornell C, Larcker DF. Evaluating structural equation models with unobservable variables and measurement error. Journal of Marketing Research. 1981. | AVE, ayırt edici geçerlik | Doğrulandı: 2026-10-28, 10.2307/3151312 |
 | foygel2010 | Foygel R, Drton M. Extended Bayesian information criteria for Gaussian graphical models. Advances in Neural Information Processing Systems. 2010. | EBIC | Bulunamadı (2026-10-28; Crossref'te kayıt yok, NeurIPS bildirisi — yayıncı/proceedings sayfasından elle doğrulanmalı) |
-| friedman2008 | Friedman J, Hastie T, Tibshirani R. Sparse inverse covariance estimation with the graphical lasso. Biostatistics. 2008. | Graphical lasso | Doğrulanmadı |
-| hayes2015 | Hayes AF. An index and test of linear moderated mediation. Multivariate Behavioral Research. 2015. | Düzenlenmiş aracılık indeksi | Doğrulanmadı |
+| friedman2008 | Friedman J, Hastie T, Tibshirani R. Sparse inverse covariance estimation with the graphical lasso. Biostatistics. 2008. | Graphical lasso | Doğrulandı: 2026-11-01, 10.1093/biostatistics/kxm045 |
+| hayes2015 | Hayes AF. An index and test of linear moderated mediation. Multivariate Behavioral Research. 2015. | Düzenlenmiş aracılık indeksi | Doğrulandı: 2026-11-01, 10.1080/00273171.2014.962683 |
 | hayes2022 | Hayes AF. Introduction to Mediation, Moderation, and Conditional Process Analysis. 3rd ed. Guilford Press; 2022. | Aracılık, düzenleyicilik, PROCESS modelleri | Doğrulanmadı |
-| henseler2015 | Henseler J, Ringle CM, Sarstedt M. A new criterion for assessing discriminant validity in variance-based structural equation modeling. Journal of the Academy of Marketing Science. 2015. | HTMT | Doğrulanmadı |
-| higgins2002 | Higgins JPT, Thompson SG. Quantifying heterogeneity in a meta-analysis. Statistics in Medicine. 2002. | I² | Doğrulanmadı |
+| henseler2015 | Henseler J, Ringle CM, Sarstedt M. A new criterion for assessing discriminant validity in variance-based structural equation modeling. Journal of the Academy of Marketing Science. 2015. | HTMT | Doğrulandı: 2026-11-01, 10.1007/s11747-014-0403-8 (Crossref çevrimiçi yılı 2014; basılı 2015) |
+| higgins2002 | Higgins JPT, Thompson SG. Quantifying heterogeneity in a meta-analysis. Statistics in Medicine. 2002. | I² | Doğrulandı: 2026-11-01, 10.1002/sim.1186 |
 | hilbe2011 | Hilbe JM. Negative Binomial Regression. 2nd ed. Cambridge University Press; 2011. | Sayım modelleri | Doğrulanmadı |
-| hoenig2001 | Hoenig JM, Heisey DM. The abuse of power: the pervasive fallacy of power calculations for data analysis. The American Statistician. 2001. | Post hoc güç eleştirisi | Doğrulanmadı |
-| holm1979 | Holm S. A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics. 1979. | Holm düzeltmesi | Doğrulanmadı |
+| hoenig2001 | Hoenig JM, Heisey DM. The abuse of power: the pervasive fallacy of power calculations for data analysis. The American Statistician. 2001. | Post hoc güç eleştirisi | Doğrulandı: 2026-11-01, 10.1198/000313001300339897 |
+| holm1979 | Holm S. A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics. 1979. | Holm düzeltmesi | Bulunamadı (2026-11-01; Crossref'te kayıt yok, JSTOR'dan elle doğrulanmalı) |
 | hopewell2025 | Hopewell S, et al. CONSORT 2025 statement: updated guideline for reporting randomised trials. BMJ. 2025;389:e081123. | RKÇ raporlaması | Bu konuşmada web ile görüldü (2026-10-28); DOI 10.1136/bmj-2024-081123 |
 | hosmer2013 | Hosmer DW, Lemeshow S, Sturdivant RX. Applied Logistic Regression. 3rd ed. Wiley; 2013. | Lojistik regresyon | Doğrulanmadı |
-| hu1999 | Hu L, Bentler PM. Cutoff criteria for fit indexes in covariance structure analysis: conventional criteria versus new alternatives. Structural Equation Modeling. 1999. | DFA uyum ölçütleri | Doğrulanmadı |
-| intHout2014 | IntHout J, Ioannidis JPA, Borm GF. The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method. BMC Medical Research Methodology. 2014. | HKSJ | Doğrulanmadı |
-| kim2013 | Kim HY. Statistical notes for clinical researchers: assessing normal distribution (2) using skewness and kurtosis. Restorative Dentistry & Endodontics. 2013. | Normallik karar kuralı (örneklem büyüklüğüne göre) | Doğrulanmadı |
-| koenker1978 | Koenker R, Bassett G. Regression quantiles. Econometrica. 1978. | Kantil regresyon | Doğrulanmadı |
+| hu1999 | Hu L, Bentler PM. Cutoff criteria for fit indexes in covariance structure analysis: conventional criteria versus new alternatives. Structural Equation Modeling. 1999. | DFA uyum ölçütleri | Doğrulandı: 2026-11-01, 10.1080/10705519909540118 |
+| intHout2014 | IntHout J, Ioannidis JPA, Borm GF. The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method. BMC Medical Research Methodology. 2014. | HKSJ | Doğrulandı: 2026-11-01, 10.1186/1471-2288-14-25 |
+| kim2013 | Kim HY. Statistical notes for clinical researchers: assessing normal distribution (2) using skewness and kurtosis. Restorative Dentistry & Endodontics. 2013. | Normallik karar kuralı (örneklem büyüklüğüne göre) | Doğrulandı: 2026-11-01, 10.5395/rde.2013.38.1.52 |
+| koenker1978 | Koenker R, Bassett G. Regression quantiles. Econometrica. 1978. | Kantil regresyon | Doğrulandı: 2026-11-01, 10.2307/1913643 |
 | koenker2005 | Koenker R. Quantile Regression. Cambridge University Press; 2005. | Kantil regresyon | Doğrulanmadı |
-| koo2016 | Koo TK, Li MY. A guideline of selecting and reporting intraclass correlation coefficients for reliability research. Journal of Chiropractic Medicine. 2016. | ICC seçimi ve yorumu | Doğrulanmadı |
-| lakens2013 | Lakens D. Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs. Frontiers in Psychology. 2013. | Etki büyüklükleri | Doğrulanmadı |
-| lakens2017 | Lakens D. Equivalence tests: a practical primer for t tests, correlations, and meta-analyses. Social Psychological and Personality Science. 2017. | TOST | Doğrulanmadı |
-| liang1986 | Liang KY, Zeger SL. Longitudinal data analysis using generalized linear models. Biometrika. 1986. | GEE | Doğrulanmadı |
-| little1988 | Little RJA. A test of missing completely at random for multivariate data with missing values. Journal of the American Statistical Association. 1988. | Little MCAR | Doğrulanmadı |
+| koo2016 | Koo TK, Li MY. A guideline of selecting and reporting intraclass correlation coefficients for reliability research. Journal of Chiropractic Medicine. 2016. | ICC seçimi ve yorumu | Doğrulandı: 2026-11-01, 10.1016/j.jcm.2016.02.012 |
+| lakens2013 | Lakens D. Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs. Frontiers in Psychology. 2013. | Etki büyüklükleri | Doğrulandı: 2026-11-01, 10.3389/fpsyg.2013.00863 |
+| lakens2017 | Lakens D. Equivalence tests: a practical primer for t tests, correlations, and meta-analyses. Social Psychological and Personality Science. 2017. | TOST | Doğrulandı: 2026-11-01, 10.1177/1948550617697177 |
+| liang1986 | Liang KY, Zeger SL. Longitudinal data analysis using generalized linear models. Biometrika. 1986. | GEE | Doğrulandı: 2026-11-01, 10.1093/biomet/73.1.13 |
+| little1988 | Little RJA. A test of missing completely at random for multivariate data with missing values. Journal of the American Statistical Association. 1988. | Little MCAR | Doğrulandı: 2026-11-01, 10.1080/01621459.1988.10478722 |
 | lundberg2017 | Lundberg SM, Lee SI. A unified approach to interpreting model predictions. Advances in Neural Information Processing Systems. 2017. | SHAP | Doğrulanmadı |
 | mcdonald1999 | McDonald RP. Test Theory: A Unified Treatment. Erlbaum; 1999. | McDonald ω | Doğrulanmadı |
 | mchugh2012 | McHugh ML. Interrater reliability: the kappa statistic. Biochemia Medica. 2012. | Kappa yorumu | Doğrulanmadı |
